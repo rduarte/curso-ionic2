@@ -1,22 +1,23 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { ConnectionService } from '../../providers/connection-service'
 
-/*
-  Generated class for the GeneratedTest page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
   selector: 'page-generated-test',
   templateUrl: 'generated-test.html'
 })
 export class GeneratedTestPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  constructor(public navCtrl: NavController, public navParams: NavParams, private connectionService: ConnectionService) {}
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad GeneratedTestPage');
+  buscarCep() : void{
+    this.connectionService.getCep('88704290')
+      .then((res) => {
+        let json = res.json();
+        console.log(json.localidade);
+      }).catch((err) => {
+        console.log(err);
+      });
   }
 
 }
