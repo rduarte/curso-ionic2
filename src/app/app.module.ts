@@ -5,13 +5,15 @@ import { HomePage } from '../pages/home/home';
 import { MenuTestPage } from '../pages/menu-test/menu-test';
 import { GeneratedTestPage } from '../pages/generated-test/generated-test';
 import { ConnectionService } from '../providers/connection-service';
+import { Lowercase } from '../pipes/lowercase'
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     MenuTestPage,
-    GeneratedTestPage
+    GeneratedTestPage,
+    Lowercase
   ],
   imports: [
     IonicModule.forRoot(MyApp)
