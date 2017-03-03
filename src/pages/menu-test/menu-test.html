@@ -13,4 +13,31 @@
 
 <ion-content padding>
   <p>{{'Olá Mundo - UUUUOOO!' | lowercase}}</p>
+
+  <p>Botões</p>
+  <button ion-button color="secondary"><ion-icon padding name="nuclear"></ion-icon>Primario</button>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Título do CARD</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+        <p>Olá mundo</p>
+        <ion-row no-padding>
+          <ion-col>
+            <button ion-button clear small>
+              <ion-icon padding name="star"></ion-icon>
+              Favoritos
+            </button>
+          </ion-col>
+          <ion-col>
+            <button ion-button clear small>
+              <ion-icon padding name="musical-note"></ion-icon>
+              Ouvir
+            </button>
+          </ion-col>
+        </ion-row>
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>
