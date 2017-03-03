@@ -1,14 +1,11 @@
 <ion-menu [content]="menuContent">
-
-  <ion-toolbar block>
-    <ion-title>Menu Principal</ion-title>
-  </ion-toolbar>
-
+  <ion-header>
+    <ion-toolbar block>
+      <ion-title>Menu Principal</ion-title>
+    </ion-toolbar>
+  </ion-header>
   <ion-content>
     <ion-list>
-      <button ion-item>
-        BUG!
-      </button>
       <button ion-item *ngFor="let p of pages" (click)="openPage(p)" menuToggle>
         <ion-icon name="{{p.icon}}"></ion-icon>
         {{ p.title }}
